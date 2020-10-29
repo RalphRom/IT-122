@@ -1,5 +1,12 @@
-console.log("hello world");
+const http = require('http');
 
-var a = 'apple'
+const hostname = '127.0.0.1';
+const port = 1337;
 
-console.log(a);
+http.createServer(function(req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello World');
+    }).listen(port, hostname, () => {
+        console.log('Server running at http://${hostname}:${port}/')
+    }
+})
