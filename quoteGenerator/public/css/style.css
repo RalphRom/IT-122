@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+    background-color: grey;
+}
+
+button{
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+h2{
+    color: darkred;
+}

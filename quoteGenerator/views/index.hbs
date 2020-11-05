@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Random Quote Generator</title>
+
+    <script>
+        function generateQuote(){
+                var quotes = [
+        "All our dreams can come true, if we have the courage to pursue them. -Walt Disney",
+        "If everything was perfect, you would never learn and you would never grow. -Beyonce",
+        "The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela",
+        "You will face many defeats in life, but never let yourself be defeated. -Maya Angelou",
+        "I'm not concerned with your liking or disliking me... All I ask is that you respect me as a human being. -Jackie Robinson"
+        ]
+        
+        var randomNumber = Math.floor(Math.random() * 5);
+
+        document.getElementById('quote').innerHTML = quotes[randomNumber]
+        
+        }
+    </script>
+    
+</head>
+<body>
+    <h1>Welcome to the Random Quote Generator</h1>
+    <h2 id="quote"></h2>
+    <button onclick="generateQuote()">Click me for a quote!</button>
+</body>
+</html>
