@@ -1,4 +1,18 @@
-doctype html 
-html 
-    body
-        
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+    title Home
+  body
+    ul.nav.justify-content-center
+      li.nav-item
+        a.nav-link.active(href='/') Home
+      li.nav-item
+        a.nav-link(href='/about') About
+      li.nav-item
+        a.nav-link(href='/contact') Contact
+    
+    .container 
+        block content

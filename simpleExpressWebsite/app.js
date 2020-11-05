@@ -27,18 +27,30 @@ app.get('/contact', function(req, res){
     res.render('contact')
 })
 
+app.get('/virusIssues', function(req, res){
+    res.render('issueVirus')
+})
+
+app.get('/hardware', function(req, res){
+    res.render('issueHardware')
+})
+
+app.get('/software', function(req, res){
+    res.render('issueSoftware')
+})
+
 app.post('/contact/send', function(req, res){
-    var transporter = nodemailer.createTransporter({
+    var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: ' ',
-            pass: 'password'
+            user: 'ralph.thewreck@gmail.com',
+            pass: ''
         }
     })
 
     var mailOptions = {
-        from: 'Ralph Romero',
-        to: '',
+        from: 'Ralph Romero <ralph.thewreck@gmail.com>',
+        to: 'ralph.romero98@gmail.com',
         subject: 'Website Submission',
         text: 'You have a submission with the following details... Name: ' + req.body.name + 'Email: ' + req.body.email + ' Message: ' + req.body.message,
         html: '<p>You have a submission with the following details...</p><ul><li>Name: ' + req.body.name +'</li><li>Email: ' + req.body.email +'</li><li>Message: ' + req.body.message +'</li></ul>'

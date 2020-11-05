@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    form(method='post', action='hardware/send')
+        h1 Hardware Issues? Tell us about it
+            .form-group
+                label Name
+                input.form-control(type='text',
+                name='name', placeholder='Enter Name')
+            .form-group
+                label Email
+                input.form-control(type='email',
+                name='email', placeholder='Enter Name')
+            .form-group
+                label Issues
+                textarea.form-control(type='message',
+                placeholder='Explain your problem')
+            button.btn.btn-default(type='submit') Submit

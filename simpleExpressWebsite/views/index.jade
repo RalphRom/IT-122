@@ -1,4 +1,28 @@
+extends layout 
 
-h1 Quote Generator
-
-button Generate a Quote
+block content
+    .jumbotron
+        h1.display-4 Computer Repair!
+        p.lead
+            | We help people who are having issues with Viruses, Hardware, or even Software. If you're someone who is having any of these issues we may be able to help.
+        p.lead
+            a.btn.btn-primary.btn-lg(href='/about' role='button') Learn more
+    .row
+        .col-sm-3
+            .card
+                .card-body
+                    h5.card-title Virus Issues
+                    p.card-text If your computer is experiencing an issue due to a virus submit a ticket here.
+                    a.btn.btn-primary(href='/virusIssues') Submit a Virus Issue
+        .col-sm-3
+            .card
+                .card-body
+                    h5.card-title Hardware Issues
+                    p.card-text If your computer is having hardware issues submit your issue here.
+                    a.btn.btn-primary(href='/hardware') Submit a Hardware Issue
+        .col-sm-3
+            .card
+                .card-body
+                    h5.card-title Software Issues
+                    p.card-text If there is problems with software on your computer submit the issue here.
+                    a.btn.btn-primary(href='/software') Submit a Software Issue
